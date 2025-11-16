@@ -1,7 +1,20 @@
     {
       "version": 2,
-      "framework": "other",
+      "builds": [
+        {
+          "src": "app.py",
+          "use": "@vercel/python"
+        }
+      ],
       "routes": [
+        {
+          "src": "/api/(.*)",
+          "dest": "app.py"
+        },
+        {
+          "src": "/google06c751c0627fc1b1.html",
+          "dest": "/google06c751c0627fc1b1.html"
+        },
         {
           "src": "/(.*)",
           "dest": "/index.html"
